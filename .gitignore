@@ -1,0 +1,38 @@
+# General CMake build files
+/build/
+/CMakeFiles/
+/Testing/
+/CMakeCache.txt
+*.cmake
+*.dir/
+
+# Google Test build artifacts
+/gtest/
+/bin/
+/lib/
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+
+# FetchContent downloaded content
+/_deps/
+
+# Coverage files
+*.gcno
+*.gcda
+*.gcov
+*.info
+*.html
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db

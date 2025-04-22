@@ -1,0 +1,18 @@
+{
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureOnOpen": true,
+    "cmake.preferredGenerators": [
+        "MinGW Makefiles", // Preferred on Windows
+        "Ninja",           // Preferred on Linux
+        "Unix Makefiles"   // Fallback on Linux
+    ],
+    "cmake.ctestArgs": [
+        "--output-on-failure"
+    ],
+    "cmake.coverageInfoFiles": [
+        "${workspaceFolder}/build/src/CMakeFiles/my_library.dir/my_library.cpp.gcno",
+        "${workspaceFolder}/build/src/CMakeFiles/my_library.dir/my_library.cpp.gcda",
+        "${workspaceFolder}/build/tests/CMakeFiles/test_my_library.dir/test_my_library.cpp.gcno",
+        "${workspaceFolder}/build/tests/CMakeFiles/test_my_library.dir/test_my_library.cpp.gcda"
+    ]
+}
