@@ -54,16 +54,22 @@ First step for any target:
   ```
 
 ### 3. **Coverage Reports**
+Only available if gcovr is installed.
 - **Command**:
   ```bash
   cmake --build build --target coverage_tests
-  cmake --build build --target coverage_main
   ```
 - **Output**:
   - `build/coverage_tests/coverage_tests.html` (HTML report for tests)
   - `build/coverage_tests/lcov.info` (LCOV file for Coverage Gutters)
+- **Command**
+  ```bash
+  cmake --build build --target coverage_main
+  ```
+- **Output**
   - `build/coverage_main/coverage_main.html` (HTML report for main)
   - `build/coverage_main/lcov.info` (LCOV file for Coverage Gutters)
+
 
 ## VS Code Configuration
 The `.vscode/` folder is included for consistent development:
@@ -73,4 +79,5 @@ The `.vscode/` folder is included for consistent development:
 
 ## Notes
 - Coverage reports are optional and only generated if `gcovr` is installed.
+- `lcov.info` files are optional and only generated if your version of gcovr supports --lcov argument
 - The project is pre-configured to work seamlessly on both Windows (MinGW) and Linux (Ninja or Unix Makefiles).

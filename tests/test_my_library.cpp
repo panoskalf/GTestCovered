@@ -9,7 +9,6 @@ TEST(MyLibraryTest, FunctionNameTest)
 
     // Act
     int result = add(40, 2);
-    // int result = 42;
 
     // Assert
     EXPECT_EQ(expected, result);

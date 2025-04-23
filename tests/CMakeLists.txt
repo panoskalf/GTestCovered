@@ -29,7 +29,8 @@ if(GCOVR_EXECUTABLE AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # Generate both HTML and LCOV reports in a single gcovr call
     COMMAND gcovr -r ${CMAKE_SOURCE_DIR} --object-directory ${CMAKE_BINARY_DIR}
     --html --html-details -o ${CMAKE_BINARY_DIR}/coverage_tests/coverage_tests.html
-    --lcov=${CMAKE_BINARY_DIR}/coverage_tests/lcov.info # LCOV output file for coverage gutters extension
+    # if LCOV is supported, output file for coverage gutters extension
+    $<$<BOOL:${GCOVR_SUPPORTS_LCOV}>:--lcov=${CMAKE_BINARY_DIR}/coverage_tests/lcov.info>
     --filter ${CMAKE_SOURCE_DIR}/src/my_library.cpp --filter ${CMAKE_SOURCE_DIR}/tests/.*\.cpp
     DEPENDS test_my_library
   )
